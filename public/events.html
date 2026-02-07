@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EventHub — My Events</title>
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+
+<header class="nav">
+  <div class="brand">EventHub</div>
+  <button class="burger" id="burgerBtn" aria-label="Open menu">☰</button>
+  <nav class="nav-right" id="navUser">
+    <a class="nav-link" href="/index.html">Home</a>
+    <a class="nav-link active" href="/events.html">My Events</a>
+    <a class="nav-link" href="/profile.html">Profile</a>
+    <button class="nav-btn secondary" id="btnLogout">Logout</button>
+  </nav>
+</header>
+
+<section class="hero hero-small">
+  <div class="container">
+    <h1>My Events</h1>
+    <p class="muted">Create, update, delete your events, attach an image and check weather.</p>
+  </div>
+</section>
+
+<main class="container">
+
+  <section class="card">
+    <h2 id="formHeader">Create event</h2>
+
+    <!-- hidden id for edit mode -->
+    <input id="editId" type="hidden" value="">
+
+    <input id="evTitle" placeholder="Title">
+    <select id="evType">
+      <option value="concert">Concert</option>
+      <option value="conference">Conference</option>
+      <option value="sports">Sports</option>
+    </select>
+
+    <input id="evDate" type="datetime-local">
+    <input id="evCity" placeholder="City (example: Almaty)">
+    <input id="evCapacity" type="number" placeholder="Capacity">
+    <input id="evPrice" type="number" placeholder="Price (optional, 0 if free)" />
+
+    <textarea id="evDesc" placeholder="Description"></textarea>
+
+    <div class="grid-2">
+      <div class="card mini" style="margin:0;">
+        <h3>Image URL (optional)</h3>
+        <input id="evImageUrl" placeholder="https://..." />
+      </div>
+
+      <div class="card mini" style="margin:0;">
+        <h3>Upload image (optional)</h3>
+        <input id="evImageFile" type="file" accept="image/*" />
+      </div>
+    </div>
+
+    <div class="row">
+      <button class="primary" id="btnSave">Create</button>
+      <button class="secondary" id="btnCancelEdit" style="display:none;">Cancel</button>
+    </div>
+
+    <p class="ok" id="okMsg"></p>
+    <p class="msg" id="errMsg"></p>
+  </section>
+
+  <section class="card">
+    <div class="row space">
+      <h2>My created events</h2>
+      <button class="secondary" id="btnReloadMy">Reload</button>
+    </div>
+
+    <input id="searchMy" placeholder="Search my events by title...">
+    <div id="myEventsList"><div class="muted">Loading...</div></div>
+  </section>
+
+</main>
+
+<script src="/js/events.js"></script>
+</body>
+</html>

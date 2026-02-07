@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EventHub — Profile</title>
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+
+<header class="nav">
+  <div class="brand">EventHub</div>
+  <button class="burger" id="burgerBtn" aria-label="Open menu">☰</button>
+  <nav class="nav-right" id="navUser">
+    <a class="nav-link" href="/index.html">Home</a>
+    <a class="nav-link" href="/events.html">My Events</a>
+    <a class="nav-link active" href="/profile.html">Profile</a>
+    <button class="nav-btn secondary" id="btnLogout">Logout</button>
+  </nav>
+</header>
+
+<section class="hero hero-small">
+  <div class="container">
+    <h1>My Profile</h1>
+    <p class="muted">User information and events you created.</p>
+  </div>
+</section>
+
+<main class="container">
+
+  <section class="card">
+    <h2>User info</h2>
+    <p><b>Username:</b> <span id="userName"></span></p>
+    <p><b>Email:</b> <span id="userEmail"></span></p>
+    <p><b>Events created:</b> <span id="eventsCount"></span></p>
+    <p class="msg" id="profileMsg"></p>
+  </section>
+
+  <section class="card">
+    <h2>Update profile</h2>
+    <p class="muted small">
+      Leave fields empty if you don’t want to change them.
+    </p>
+
+    <input id="updUsername" placeholder="New username (optional)" />
+    <input id="updEmail" placeholder="New email (optional)" />
+    <input id="updPassword" type="password" placeholder="New password (optional, min 6)" />
+
+    <div class="row">
+      <button class="primary" id="btnUpdateProfile">Save changes</button>
+      <button class="secondary" id="btnClearUpdate">Clear</button>
+    </div>
+
+    <p class="ok" id="updOk"></p>
+    <p class="msg" id="updErr"></p>
+  </section>
+
+  <section class="card">
+    <div class="row space">
+      <h2>My created events</h2>
+      <a class="nav-btn" href="/events.html">Create / Update events</a>
+    </div>
+    <div id="myEventsPreview"><div class="muted">Loading...</div></div>
+  </section>
+
+</main>
+
+<script src="/js/profile.js"></script>
+</body>
+</html>

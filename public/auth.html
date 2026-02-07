@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EventHub — Auth</title>
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+
+<header class="nav">
+  <div class="brand">EventHub</div>
+  <nav class="nav-right">
+    <a class="nav-link" href="/index.html">Home</a>
+    <a class="nav-link active" href="/auth.html">Login</a>
+  </nav>
+</header>
+
+<section class="hero hero-small">
+  <div class="container">
+    <h1 id="formTitle">Login</h1>
+    <p class="muted" id="formSubtitle">Sign in to create own events.</p>
+  </div>
+</section>
+
+<main class="container">
+  <section class="card" style="max-width:720px;margin:0 auto;">
+    <h2 id="cardTitle">Sign In To Your Account</h2>
+
+    <div id="usernameWrap" style="display:none;">
+      <input id="username" placeholder="Username" />
+    </div>
+
+    <input id="email" placeholder="Email" />
+    <input id="password" type="password" placeholder="Password (min 6)" />
+
+    <button class="primary" id="submitBtn">Login</button>
+    <p class="msg" id="msg"></p>
+
+    <hr/>
+    <p class="muted" id="switchText"></p>
+  </section>
+</main>
+
+<script src="/js/auth.js"></script>
+</body>
+</html>

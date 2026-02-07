@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EventHub — Home</title>
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+
+<header class="nav">
+  <div class="brand">EventHub</div>
+
+  <button class="burger" id="burgerBtn" aria-label="Open menu">☰</button>
+
+  <nav class="nav-right" id="navGuest">
+    <a class="nav-link active" href="/index.html">Home</a>
+    <a class="nav-link" href="/auth.html">Login</a>
+  </nav>
+
+  <nav class="nav-right" id="navUser">
+    <a class="nav-link active" href="/index.html">Home</a>
+    <a class="nav-link" href="/events.html">My Events</a>
+    <a class="nav-link" href="/profile.html">Profile</a>
+    <button class="nav-btn secondary" id="btnLogout">Logout</button>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <h1>EventHub</h1>
+    <p class="muted">
+      A bright place where you discover concerts, conferences and sports events.
+      Browse events, and after login you can create your own event, attach an image (URL or upload),
+      and check the weather forecast by city for the event date.
+    </p>
+  </div>
+</section>
+
+<main class="container">
+
+  <section class="card">
+    <h2>What you can do here</h2>
+    <p><b>Browse</b> events and see details (date, city, description).</p>
+    <p><b>Login</b> to create your own events and manage them.</p>
+    <p><b>Weather</b> forecast: check if the event day is comfortable (city-based forecast).</p>
+    <p><b>Profile</b> shows your data and all events you created.</p>
+  </section>
+
+  <section class="card">
+    <div class="row space">
+      <h2>Upcoming events</h2>
+      <button class="secondary" id="btnRefresh">Refresh</button>
+    </div>
+
+    <p class="muted small">
+      Guests see a demo preview. Logged-in users see all real events from the database (all users).
+    </p>
+
+    <div class="events-grid" id="homeEvents">
+      <div class="muted">Loading...</div>
+    </div>
+
+    <div class="center-btn">
+      <button class="primary" id="btnCreateHome">Create my events</button>
+    </div>
+    <p class="muted small" style="text-align:center;margin-top:8px;">
+      Guests will be redirected to Login. Logged-in users go to My Events.
+    </p>
+  </section>
+
+</main>
+
+<script src="/js/home.js"></script>
+</body>
+</html>
