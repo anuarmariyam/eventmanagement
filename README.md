@@ -1,4 +1,3 @@
-````md
 # EventHub — Event Management Web Application
 
 ## Project Overview
@@ -13,6 +12,7 @@ The project uses JWT-based authentication, MongoDB for data storage, and follows
 ## Setup and Installation Instructions
 
 ### Prerequisites
+
 - Node.js v18 or higher
 - MongoDB (local or MongoDB Atlas)
 - OpenWeather API key
@@ -22,10 +22,11 @@ The project uses JWT-based authentication, MongoDB for data storage, and follows
 ### Installation Steps
 
 #### 1. Clone the repository
+
 ```bash
 git clone <repository-url>
 cd project-root
-````
+```
 
 #### 2. Install dependencies
 
